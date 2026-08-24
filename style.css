@@ -4,35 +4,255 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background: #f5f7fb;
+    background: #f7f8fc;
     color: #111827;
     line-height: 1.6;
-    padding: 40px 20px;
 }
 
-h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e5e7eb;
 }
 
-h2 {
-    font-size: 28px;
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    margin-left: 4px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #111827;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 7%;
+    background: white;
+}
+
+.tagline,
+.section-label {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 10vw, 100px);
+    line-height: 0.95;
+    letter-spacing: -5px;
+    max-width: 900px;
+    margin-bottom: 30px;
+}
+
+.hero-text {
+    max-width: 600px;
+    font-size: 19px;
+    color: #4b5563;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button,
+#contactButton {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.primary-button,
+#contactButton {
+    background: #111827;
+    color: white;
+    border: none;
+}
+
+.secondary-button {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.services,
+.about,
+.contact {
+    padding: 100px 7%;
+}
+
+.services h2,
+.about h2,
+.contact h2 {
+    font-size: clamp(36px, 6vw, 60px);
+    line-height: 1;
+    letter-spacing: -2px;
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 35px;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+}
+
+.icon {
+    font-size: 35px;
     margin-bottom: 20px;
 }
 
-p {
-    max-width: 600px;
-    margin-bottom: 25px;
+.service-card h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
 }
 
-button {
-    padding: 14px 28px;
-    border: none;
-    border-radius: 8px;
+.service-card p {
+    color: #6b7280;
+}
+
+.about {
     background: #111827;
     color: white;
-    font-size: 16px;
-    cursor: pointer;
+}
+
+.workflow {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.step {
+    flex: 1;
+}
+
+.step span {
+    font-size: 13px;
+    font-weight: 800;
+    opacity: 0.6;
+}
+
+.step h3 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.step p {
+    opacity: 0.7;
+}
+
+.arrow {
+    font-size: 30px;
+}
+
+.contact {
+    text-align: center;
+    background: white;
+}
+
+.contact h2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact > p:not(.section-label) {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #6b7280;
+}
+
+footer {
+    padding: 35px 7%;
+    background: #111827;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 10px;
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero,
+    .services,
+    .about,
+    .contact {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+        letter-spacing: -3px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .workflow {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
 }
