@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const business = document.getElementById("business").value;
         const message = document.getElementById("message").value;
 
-        const webhookURL = "https://drillo4.app.n8n.cloud/";
+        const webhookURL = "https://drillo4.app.n8n.cloud/
+webhook-test/flowza-leads";
 
         try {
 
