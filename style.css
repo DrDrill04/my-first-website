@@ -256,3 +256,57 @@ footer p {
         transform: rotate(90deg);
     }
 }
+
+#contactForm {
+    max-width: 650px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #f9fafb;
+    color: #111827;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #111827;
+    background: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+#submitButton {
+    padding: 15px 28px;
+    border: none;
+    border-radius: 8px;
+    background: #111827;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#submitButton:hover {
+    opacity: 0.85;
+}
