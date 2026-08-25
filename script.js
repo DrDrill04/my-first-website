@@ -1,14 +1,23 @@
-const contactForm = document.getElementById("contactForm");
+document.addEventListener("DOMContentLoaded", function () {
 
-contactForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+    const contactForm = document.getElementById("contactForm");
 
-    const name = document.getElementById("name").value;
+    if (!contactForm) {
+        return;
+    }
 
-    alert(
-        "Thanks, " + name + "! 🚀\n\n" +
-        "Your message has been received by FLOWZA."
-    );
+    contactForm.addEventListener("submit", function (event) {
 
-    contactForm.reset();
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+
+        alert(
+            "Thanks, " + name + "! 🚀\n\n" +
+            "Your message has been received by FLOWZA."
+        );
+
+        contactForm.reset();
+    });
+
 });
