@@ -1,5 +1,14 @@
-const button = document.querySelector("button");
+const contactForm = document.getElementById("contactForm");
 
-button.addEventListener("click", function () {
-    alert("Welcome to FLOWZA! Let's automate your business. 🚀");
+contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+
+    alert(
+        "Thanks, " + name + "! 🚀\n\n" +
+        "Your message has been received by FLOWZA."
+    );
+
+    contactForm.reset();
 });
